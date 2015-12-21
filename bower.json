@@ -1,0 +1,37 @@
+{
+  "name": "paper-collapse-radio-group",
+  "version": "1.0.0",
+  "authors": [
+    "collaborne"
+  ],
+  "description": "A material design radio group that can be collapsed (Polymer 1.x)",
+  "main": "paper-collapse-radio-group.html",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "paper",
+    "material design",
+    "lists",
+    "item"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.com/collaborne/paper-collapse-radio-group",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
+    "iron-collapse": "PolymerElements/iron-collapse#^1.0.0",
+    "paper-item": "PolymerElements/paper-item#^1.0.0",
+    "paper-radio-button": "PolymerElements/paper-radio-button#^1.0.0",
+    "paper-radio-group": "PolymerElements/paper-radio-group#^1.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^1.0.0"
+  },
+  "devDependencies": {
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
+    "web-component-tester": "*",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}

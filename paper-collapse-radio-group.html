@@ -1,0 +1,112 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../iron-collapse/iron-collapse.html">
+<link rel="import" href="../paper-item/paper-icon-item.html">
+<link rel="import" href="../paper-item/paper-item-body.html">
+<link rel="import" href="../paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
+
+<dom-module id='paper-collapse-radio-group'>
+
+	<template>
+
+		<style>
+			.icon {
+				color: var(--disabled-text-color);
+			}
+
+			.name {
+				color: var(--primary-text-color);
+				font-weight: bold;
+			}
+
+			.description {
+				color: var(--secondary-text-color);
+			}
+
+			.item {
+				@apply(--paper-font-body1);
+				display: block;
+			}
+		</style>
+
+		<paper-icon-item on-tap='_toggleOpened'>
+			<iron-icon icon=[[icon]] class='icon' item-icon></iron-icon>
+			<paper-item-body two-line>
+				[[selectedItem.name]]
+				<div secondary>[[selectedItem.description]]</div>
+			</paper-item-body>
+            <iron-icon icon=[[_getToggleIcon(opened)]] class='icon'></iron-icon>
+		</paper-icon-item>
+		<iron-collapse opened=[[opened]]>
+			<paper-radio-group id='group' selected={{selected}} selected-item={{_selectedRadioButton}}>
+				<template is='dom-repeat' items=[[items]]>
+					<paper-radio-button name=[[item.id]] class='item'>
+						<span class='name'>[[item.name]]</span><br>
+						<span class='description'>[[item.description]]</span>
+					</paper-radio-button>
+				</template>
+			</paper-radio-group>
+		</iron-collapse>
+
+	</template>
+</dom-module>
+
+<script>
+
+(function() {
+
+	Polymer({
+		is: 'paper-collapse-radio-group',
+		properties: {
+			items: {
+				type: Array,
+				observer: '_onChangedItems'
+			},
+			icon: String,
+
+			selected: {
+				type: String,
+				notify: true
+			},
+			selectedItem: {
+				type: Object,
+				notify: true,
+				computed: '_computeSelectedItem(_selectedRadioButton,items)'
+			},
+			opened: {
+				type: Boolean,
+				notify: true,
+				value: false
+			},
+
+			_selectedRadioButton: Object
+		},
+
+		// Private methods
+		_onChangedItems: function(items) {
+			if (items.length === 0) {
+				// Ignore empty array
+				return;
+			}
+
+			// Default to first option
+			this.$.group.select(items[0].id);
+		},
+		_toggleOpened: function(e) {
+			this.opened = !this.opened;
+		},
+		_getToggleIcon: function(opened) {
+			return opened ? 'icons:expand-less' : 'icons:expand-more';
+		},
+		_computeSelectedItem: function(_selectedRadioButton, items) {
+			var index = this.$.group.indexOf(_selectedRadioButton);
+			return items[index];
+		}
+	});
+
+})();
+
+</script>

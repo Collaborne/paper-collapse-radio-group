@@ -1,0 +1,21 @@
+<html>
+	<head>
+	    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../../iron-icons/hardware-icons.html">
+		<link rel="import" href="../paper-collapse-radio-group.html">
+	</head>
+
+	<body>
+		<template is="dom-bind">
+			<paper-collapse-radio-group icon="hardware:security" items=[[items]]></paper-collapse-radio-group>
+		</template>
+
+		<script>
+			var scope = document.querySelector("template[is=dom-bind]");
+			scope.items = [
+				{ id: 'public', name: 'Public', description: 'Everybody has access' },
+				{ id: 'private', name: 'Private', description: 'Only internal people have access' }
+			];
+		</script>
+	</body>
+</html>

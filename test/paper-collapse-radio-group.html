@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>paper-collapse-radio-group</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="../../web-component-tester/browser.js"></script>
+		<script src="../../test-fixture/test-fixture-mocha.js"></script>
+
+		<link rel="import" href="../paper-collapse-radio-group.html">
+		<link rel="import" href="../../test-fixture/test-fixture.html">
+	</head>
+	<body>
+
+		<test-fixture id="TrivialElement">
+			<template>
+				<paper-collapse-radio-group></paper-collapse-radio-group>
+			</template>
+		</test-fixture>
+
+		<script>
+			suite('<paper-collapse-radio-group>', function() {
+				suite('open/close behavior', function() {
+					var element;
+
+					setup(function() {
+						element = fixture('TrivialElement');
+					});
+
+					test('defaults to closed', function() {
+						expect(element.opened).to.be.eql(false);
+					});
+
+					test('toggles opened state', function() {
+						var initialState = element.opened;
+
+						element._toggleOpened();
+						expect(element.opened).to.be.eql(!initialState);
+
+						element._toggleOpened();
+						expect(element.opened).to.be.eql(initialState);
+					});
+
+					test('shows open toggle icon when closed', function() {
+						expect(element._getToggleIcon(false)).to.be.eql('icons:expand-more');
+					});
+
+					test('shows open toggle icon when opened', function() {
+						expect(element._getToggleIcon(true)).to.be.eql('icons:expand-less');
+					});
+				});
+
+				suite('select item behavior', function() {
+					var element;
+
+					setup(function() {
+						element = fixture('TrivialElement');
+					});
+
+					test('defaults to first item', function() {
+						element.items = [ { id: 'first' }, { id: 'second'} ];
+
+						expect(element.selected).to.be.eql('first');
+					});
+				});
+			});
+		</script>
+
+	</body>
+</html>
