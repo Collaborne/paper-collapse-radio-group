@@ -11,7 +11,6 @@ A material design radio group that can be collapsed. This element is built for [
 Property         | Type    | Description                                    
 ---------------- | ------- | -----------------------------------------------
 **items**        | Array   | Array of items that is shown. An item needs to have an ID and a name; and can have an optional description
-**icon**         | String  | Name of the icon
 **selected**     | String  | ID of the selected item
 **selectedItem** | Object  | Item selected by the user
 **opened**       | Boolean | True if the group is currently opened
