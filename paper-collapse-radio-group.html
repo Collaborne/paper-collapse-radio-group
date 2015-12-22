@@ -2,7 +2,7 @@
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-collapse/iron-collapse.html">
-<link rel="import" href="../paper-item/paper-icon-item.html">
+<link rel="import" href="../paper-item/paper-item.html">
 <link rel="import" href="../paper-item/paper-item-body.html">
 <link rel="import" href="../paper-radio-button/paper-radio-button.html">
 <link rel="import" href="../paper-radio-group/paper-radio-group.html">
@@ -13,10 +13,6 @@
 	<template>
 
 		<style>
-			.icon {
-				color: var(--disabled-text-color);
-			}
-
 			.name {
 				color: var(--primary-text-color);
 				font-weight: bold;
@@ -32,14 +28,13 @@
 			}
 		</style>
 
-		<paper-icon-item on-tap='_toggleOpened'>
-			<iron-icon icon=[[icon]] class='icon' item-icon></iron-icon>
+		<paper-item on-tap='_toggleOpened'>
 			<paper-item-body two-line>
 				[[selectedItem.name]]
 				<div secondary>[[selectedItem.description]]</div>
 			</paper-item-body>
             <iron-icon icon=[[_getToggleIcon(opened)]] class='icon'></iron-icon>
-		</paper-icon-item>
+		</paper-item>
 		<iron-collapse opened=[[opened]]>
 			<paper-radio-group id='group' selected={{selected}} selected-item={{_selectedRadioButton}}>
 				<template is='dom-repeat' items=[[items]]>
@@ -65,7 +60,6 @@
 				type: Array,
 				observer: '_onChangedItems'
 			},
-			icon: String,
 
 			selected: {
 				type: String,
