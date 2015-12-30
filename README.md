@@ -1,3 +1,6 @@
+_[Demo and API Docs](http://collaborne.github.io/paper-collapse-radio-group)_
+
+
 paper-collapse-radio-group [![Bower version](https://badge.fury.io/bo/paper-collapse-radio-group.svg)](http://badge.fury.io/bo/paper-collapse-radio-group) [![Travis state](https://travis-ci.org/Collaborne/paper-collapse-radio-group.svg?branch=master)](https://travis-ci.org/Collaborne/paper-collapse-radio-group)
 =========
 
@@ -5,26 +8,9 @@ A material design radio group that can be collapsed. This element is built for [
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
-
-## Properties
-
-Property         | Type    | Description                                    
----------------- | ------- | -----------------------------------------------
-**items**        | Array   | Array of items that is shown. An item needs to have an ID and a name; and can have an optional description
-**selected**     | String  | ID of the selected item
-**selectedItem** | Object  | Item selected by the user
-**opened**       | Boolean | True if the group is currently opened
-
-
-
-## Usage
+To use the element:
 
 `bower install paper-collapse-radio-group`
-
-```html
-<paper-collapse-radio-group icon="hardware:security" items=[[items]]></paper-collapse-radio-group>
-```
-
 
 ## License
 

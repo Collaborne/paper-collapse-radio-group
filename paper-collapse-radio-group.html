@@ -8,6 +8,17 @@
 <link rel="import" href="../paper-radio-group/paper-radio-group.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
 
+<!--
+A material design radio group that can be collapsed.
+
+### Example
+
+```html
+<paper-collapse-radio-group icon="hardware:security" items=[[items]]></paper-collapse-radio-group>
+```
+
+@demo demo/index.html
+-->
 <dom-module id='paper-collapse-radio-group'>
 
 	<template>
@@ -60,20 +71,34 @@
 	Polymer({
 		is: 'paper-collapse-radio-group',
 		properties: {
+			/**
+			 * Array of items that is shown. An item needs to have an ID and a name; and can have an optional description
+			 */
 			items: {
 				type: Array,
 				observer: '_onChangedItems'
 			},
-
+			
+			/**
+			 * ID of the selected item
+			 */
 			selected: {
 				type: String,
 				notify: true
 			},
+			
+			/**
+			 * Item selected by the user
+			 */
 			selectedItem: {
 				type: Object,
 				notify: true,
 				computed: '_computeSelectedItem(_selectedRadioButton,items)'
 			},
+			
+			/**
+			 * True if the group is currently opened
+			 */
 			opened: {
 				type: Boolean,
 				notify: true,
