@@ -19,7 +19,7 @@ A material design radio group that can be collapsed.
 
 @demo demo/index.html
 -->
-<dom-module id='paper-collapse-radio-group'>
+<dom-module id="paper-collapse-radio-group">
 
 	<template>
 
@@ -43,19 +43,19 @@ A material design radio group that can be collapsed.
 			}
 		</style>
 
-		<paper-item on-tap='_toggleOpened' disabled=[[disabled]]>
+		<paper-item on-tap="_toggleOpened" disabled=[[disabled]]>
 			<paper-item-body two-line>
 				[[selectedItem.name]]
 				<div secondary>[[selectedItem.description]]</div>
 			</paper-item-body>
-            <iron-icon icon=[[_getToggleIcon(opened)]] class='icon' hidden=[[disabled]]></iron-icon>
+            <iron-icon icon=[[_getToggleIcon(opened)]] class="icon" hidden=[[disabled]]></iron-icon>
 		</paper-item>
 		<iron-collapse opened=[[opened]]>
-			<paper-radio-group id='group' selected={{selected}} selected-item={{_selectedRadioButton}}>
-				<template is='dom-repeat' items=[[items]]>
-					<paper-radio-button name=[[item.id]] class='item' disabled=[[disabled]]>
-						<span class='name'>[[item.name]]</span><br>
-						<span class='description'>[[item.description]]</span>
+			<paper-radio-group id="group" selected={{selected}} selected-item={{_selectedRadioButton}}>
+				<template is="dom-repeat" items=[[items]]>
+					<paper-radio-button name=[[item.id]] class="item" disabled=[[disabled]]>
+						<span class="name">[[item.name]]</span><br>
+						<span class="description">[[item.description]]</span>
 					</paper-radio-button>
 				</template>
 			</paper-radio-group>
