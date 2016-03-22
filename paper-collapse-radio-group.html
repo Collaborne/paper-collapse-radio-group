@@ -25,6 +25,10 @@ A material design radio group that can be collapsed.
 	<template>
 
 		<style>
+			.closed {
+				cursor: pointer;
+			}
+
 			#group {
 				padding: 0 4px;
 			}
@@ -44,7 +48,7 @@ A material design radio group that can be collapsed.
 			}
 		</style>
 
-		<paper-item on-tap="_toggleOpened" disabled="[[disabled]]">
+		<paper-item class="closed" on-tap="_toggleOpened" disabled="[[disabled]]">
 			<paper-item-body two-line>
 				[[selectedItem.name]]
 				<div secondary>[[selectedItem.description]]</div>
