@@ -7,18 +7,20 @@
 	</head>
 
 	<body>
-		<template is="dom-bind">
-			<paper-collapse-radio-group items="[[items]]"></paper-collapse-radio-group>
+		<dom-bind>
+			<template>
+				<paper-collapse-radio-group items="[[items]]"></paper-collapse-radio-group>
 
-			<paper-collapse-radio-group items="[[items]]" disabled></paper-collapse-radio-group>
-		</template>
+				<paper-collapse-radio-group items="[[items]]" disabled></paper-collapse-radio-group>
 
-		<script>
-			var scope = document.querySelector("template[is=dom-bind]");
-			scope.items = [
-				{ id: 'public', name: 'Public', description: 'Everybody has access' },
-				{ id: 'private', name: 'Private', description: 'Only internal people have access' }
-			];
-		</script>
+				<script>
+					var scope = document.querySelector("dom-bind");
+					scope.items = [
+						{ id: 'public', name: 'Public', description: 'Everybody has access' },
+						{ id: 'private', name: 'Private', description: 'Only internal people have access' }
+					];
+				</script>
+			</template>
+		</dom-bind>
 	</body>
 </html>

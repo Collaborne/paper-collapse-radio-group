@@ -3,7 +3,7 @@
   "authors": [
     "collaborne"
   ],
-  "description": "A material design radio group that can be collapsed (Polymer 1.x)",
+  "description": "A material design radio group that can be collapsed (Polymer)",
   "main": "paper-collapse-radio-group.html",
   "keywords": [
     "web-components",
@@ -19,19 +19,17 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
-    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
-    "iron-collapse": "PolymerElements/iron-collapse#^1.0.0",
-    "paper-item": "PolymerElements/paper-item#^1.0.0",
-    "paper-radio-button": "PolymerElements/paper-radio-button#^1.0.0",
-    "paper-radio-group": "PolymerElements/paper-radio-group#^1.0.0",
-    "paper-styles": "PolymerElements/paper-styles#^1.0.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.0",
+    "iron-collapse": "PolymerElements/iron-collapse#^2.0.0",
+    "paper-item": "PolymerElements/paper-item#^2.0.0",
+    "paper-radio-button": "PolymerElements/paper-radio-button#^2.0.0",
+    "paper-radio-group": "PolymerElements/paper-radio-group#^2.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
-    "web-component-tester": "*",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "web-component-tester": "*"
   }
 }

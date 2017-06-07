@@ -4,7 +4,7 @@ _[Demo and API Docs](http://collaborne.github.io/paper-collapse-radio-group)_
 paper-collapse-radio-group [![Bower version](https://badge.fury.io/bo/paper-collapse-radio-group.svg)](http://badge.fury.io/bo/paper-collapse-radio-group) [![Travis state](https://travis-ci.org/Collaborne/paper-collapse-radio-group.svg?branch=master)](https://travis-ci.org/Collaborne/paper-collapse-radio-group)
 =========
 
-A material design radio group that can be collapsed. This element is built for [Polymer 1.x](https://www.polymer-project.org).
+A material design radio group that can be collapsed. This element is built for [Polymer](https://www.polymer-project.org).
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
