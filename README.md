@@ -1,16 +1,36 @@
-_[Demo and API Docs](http://collaborne.github.io/paper-collapse-radio-group)_
-
-
-paper-collapse-radio-group [![Bower version](https://badge.fury.io/bo/paper-collapse-radio-group.svg)](http://badge.fury.io/bo/paper-collapse-radio-group) [![Travis state](https://travis-ci.org/Collaborne/paper-collapse-radio-group.svg?branch=master)](https://travis-ci.org/Collaborne/paper-collapse-radio-group)
+paper-collapse-radio-group [![Bower version](https://badge.fury.io/bo/paper-collapse-radio-group.svg)](http://badge.fury.io/bo/paper-collapse-radio-group) [![Travis state](https://travis-ci.org/Collaborne/paper-collapse-radio-group.svg?branch=master)](https://travis-ci.org/Collaborne/paper-collapse-radio-group) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/Collaborne/paper-collapse-radio-group)
 =========
 
 A material design radio group that can be collapsed. This element is built for [Polymer](https://www.polymer-project.org).
 
-![Screenshot](/doc/screenshot.png "Screenshot")
-
 To use the element:
 
 `bower install paper-collapse-radio-group`
+
+<!--
+```
+<custom-element-demo>
+  <dom-bind>
+    <template>
+        <link rel="import" href="paper-collapse-radio-group.html">
+        <next-code-block></next-code-block>
+    </template>
+  </dom-bind>
+</custom-element-demo>
+```
+-->
+```html
+<paper-collapse-radio-group items="[[items]]"></paper-collapse-radio-group>
+
+<script>
+    var scope = document.querySelector("dom-bind");
+    scope.items = [
+        { id: 'public', name: 'Public', description: 'Everybody has access' },
+        { id: 'private', name: 'Private', description: 'Only internal people have access' }
+    ];
+</script>
+```
+
 
 ## License
 
