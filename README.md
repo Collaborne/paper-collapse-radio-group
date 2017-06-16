@@ -10,7 +10,7 @@ To use the element:
 <!--
 ```
 <custom-element-demo>
-  <dom-bind>
+  <dom-bind id="app">
     <template>
         <link rel="import" href="paper-collapse-radio-group.html">
         <next-code-block></next-code-block>
@@ -23,8 +23,7 @@ To use the element:
 <paper-collapse-radio-group items="[[items]]"></paper-collapse-radio-group>
 
 <script>
-    var scope = document.querySelector("dom-bind");
-    scope.items = [
+    app.items = [
         { id: 'public', name: 'Public', description: 'Everybody has access' },
         { id: 'private', name: 'Private', description: 'Only internal people have access' }
     ];
