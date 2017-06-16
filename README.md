@@ -23,7 +23,7 @@ To use the element:
 <paper-collapse-radio-group items="[[items]]"></paper-collapse-radio-group>
 
 <script>
-    app.items = [
+    items = [
         { id: 'public', name: 'Public', description: 'Everybody has access' },
         { id: 'private', name: 'Private', description: 'Only internal people have access' }
     ];
